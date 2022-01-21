@@ -1,0 +1,86 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:tb="sap.ui.table" xmlns:f="sap.ui.layout.form" controllerName="demo_fiori.controller.AddNewStudent">
+	<semantic:DetailPage id="page" title="Điền thông tin học sinh" navButtonPress="onNavBack" showNavButton="{device>/system/phone}">
+		<semantic:content>
+			<Table showSeparators="None" width="auto" backgroundDesign="Transparent">
+				<columns>
+					<Column hAlign="Left" vAlign="Middle" width="1%" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false"/>
+					<Column hAlign="Left" vAlign="Middle" width="3%" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false"/>
+					<Column hAlign="Left" vAlign="Middle" width="5%" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false"/>
+					<Column hAlign="Left" vAlign="Middle" width="5%" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false"/>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text textAlign="Left"/>
+							<Label text="Họ và tên (*)" design="Bold"/>
+							<Input id="NAME"  textAlign="Left"/>
+							<Text textAlign="Left"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text textAlign="Left"/>
+							<Label text="Ngày sinh (*)" design="Bold"/>
+							<DatePicker id="BIRTHDAY" displayFormat="dd.MM.YYYY" valueFormat="yyyyMMdd"/>
+							<Text textAlign="Left"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text textAlign="Left"/>
+							<Label text="Lớp (*)" design="Bold"/>
+							<Input id="CLASS" textAlign="Left"/>
+							<Text textAlign="Left"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text textAlign="Left"/>
+							<Label class="masterFont" text="Giới tính (*)" design="Bold"/>
+							<!--<Input id="GENDER"  textAlign="Left"/>-->
+							<ComboBox xmlns="sap.m" id="GENDER">
+							    <items>
+							      <core:Item xmlns:core="sap.ui.core" key="1" 
+							           text="Nam"  id="gender1"/>
+							      <core:Item xmlns:core="sap.ui.core" key="2" 
+							           text="Nữ" id="gender2"/>
+							    </items>
+							  </ComboBox>
+							<Text textAlign="Left"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text textAlign="Left"/>
+							<Label text="Số điện thoại (*)" design="Bold"/>
+							<Input id="PHONE"  textAlign="Left"/>
+							<Text textAlign="Left"/>	
+						</cells>
+					</ColumnListItem>
+				</items>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text textAlign="Left"/>
+							<Label text="Địa chỉ (*)" design="Bold"/>
+							<Input id="ADDRESS"  textAlign="Left"/>
+							<Text textAlign="Left"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			
+			</Table>
+		</semantic:content>
+		<semantic:customFooterContent>
+			<Button text="Lưu" id="createButton" enabled="{appView>/addEnabled}" press="onSave" icon="sap-icon://create-form" visible="{appView>/manage}"/>
+		</semantic:customFooterContent>		
+	</semantic:DetailPage>
+</mvc:View>

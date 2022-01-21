@@ -1,0 +1,72 @@
+{
+    "resources": [
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "localService/ZO_PVN_DEMO_SRV/metadata.xml"
+        },
+        {
+            "name": "localService/ZO_GPUF2005_SRV/metadata.xml"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "controller/App.Controller.js"
+        },
+        {
+            "name": "controller/AddNewStudent.controller.js"
+        },
+        {
+            "name": "controller/demo.controller.js"
+        },
+        {
+            "name": "controller/Master.controller.js"
+        },
+        {
+            "name": "controller/BaseController.js"
+        },
+        {
+            "name": "controller/Detail.controller.js"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "view/AddNewStudent.view.xml"
+        },
+        {
+            "name": "view/App.View.xml"
+        },
+        {
+            "name": "view/demo.view.xml"
+        },
+        {
+            "name": "view/Master.view.xml"
+        },
+        {
+            "name": "view/Detail.view.xml"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}

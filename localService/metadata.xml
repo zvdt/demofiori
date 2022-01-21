@@ -1,0 +1,146 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZO_ZGPUC2002_SRV" xml:lang="en" sap:schema-version="1">
+            <EntityType Name="ReQuota_H" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ANFNR"/>
+                </Key>
+                <Property Name="ANFNR" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="RFQ" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Z_PRETYPE" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="PRE type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LIFNR" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Vendor" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NAME1" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Vendor name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RBNRM" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CAT_NAME" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Category name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RFQ_FROM" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="RFQ From" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RFQ_TO" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="RFQ To" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="QUO_FROM" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Valid From" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="QUO_TO" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Valid To" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CREATED" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Created" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DAYLEFT" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Day left" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SUM_PRICE" Type="Edm.Decimal" Nullable="false" Precision="31" Scale="2" sap:unicode="false" sap:label="Sum price" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SUM_LAST_PRICE" Type="Edm.Decimal" Nullable="false" Precision="31" Scale="2" sap:unicode="false" sap:label="Sum last price" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TOTAL_RECORD" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Sum Item Record" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WAERS" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Currency " sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ACTION" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Action for deep" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SORT_STATUS" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Sort status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GPUP_STATUS" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="GP upload status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BY_VENDOR" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="price input by vendor" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="STATUS" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CFLAG" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PFLAG" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="B_DISPLAY" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SEARCH_FIELD" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Search" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="AttachSet" Relationship="ZO_ZGPUC2002_SRV.HeaderToAttach" FromRole="FromRole_HeaderToAttach" ToRole="ToRole_HeaderToAttach"/>
+                <NavigationProperty Name="ReQuota_InSet" Relationship="ZO_ZGPUC2002_SRV.HeaderToDetail" FromRole="FromRole_HeaderToDetail" ToRole="ToRole_HeaderToDetail"/>
+            </EntityType>
+            <EntityType Name="ReQuota_I" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ANFNR"/>
+                    <PropertyRef Name="ITEM"/>
+                    <PropertyRef Name="MATNR"/>
+                </Key>
+                <Property Name="ANFNR" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="RFQ" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ITEM" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Item No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MATNR" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Material" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TXZ01_E" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Description E" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TXZ01_V" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Description V" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SPEC" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Spec" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MANUFACTURER" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Manufacturer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ORIGIN" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Origin" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PRICE" Type="Edm.Decimal" Nullable="false" Precision="31" Scale="0" sap:unicode="false" sap:label="Price" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LAST_PRICE" Type="Edm.Decimal" Nullable="false" Precision="31" Scale="0" sap:unicode="false" sap:label="Last price" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MIN_PRICE" Type="Edm.Decimal" Nullable="false" Precision="31" Scale="0" sap:unicode="false" sap:label="Min price" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MEINS" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Oum" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PEINH" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Per" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="STATUS" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RFQ_FROM" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="RFQ From" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RFQ_TO" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="RFQ To" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NEGO_DUE" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Nego deadline " sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ENABLE_INPUT" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Enable Input" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BY_VENDOR" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="By vendor" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DATAB" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Valid From" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DATBI" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Valid To" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SUM_PRICE" Type="Edm.Decimal" Nullable="false" Precision="31" Scale="0" sap:unicode="false" sap:label="Sum price" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SUM_LAST_PRICE" Type="Edm.Decimal" Nullable="false" Precision="31" Scale="0" sap:unicode="false" sap:label="Sum last price" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LIFNR" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Vendor" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="QUO_FROM" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Valid From" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="QUO_TO" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Valid To" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CAT_NAME" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Category name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Z_PRETYPE" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="PRE type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GPUP_STATUS" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="GP upload status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NAME1" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Vendor name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WAERS" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="B_FLAG" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Button Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="B_DISPLAY" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SEARCH_FIELD" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Search" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="ReQuota_HnSet" Relationship="ZO_ZGPUC2002_SRV.HeaderToDetail" FromRole="ToRole_HeaderToDetail" ToRole="FromRole_HeaderToDetail"/>
+            </EntityType>
+            <EntityType Name="Attach" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                    <PropertyRef Name="DOCUMENTID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DOCUMENTID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MIMETYPE" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EXTENSION" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FILENAME" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CONTENT" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="ReQuota_H" Relationship="ZO_ZGPUC2002_SRV.HeaderToAttach" FromRole="ToRole_HeaderToAttach" ToRole="FromRole_HeaderToAttach"/>
+            </EntityType>
+            <EntityType Name="AUTHORITY" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Manage" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="HeaderToAttach" sap:content-version="1">
+                <End Type="ZO_ZGPUC2002_SRV.ReQuota_H" Multiplicity="1" Role="FromRole_HeaderToAttach"/>
+                <End Type="ZO_ZGPUC2002_SRV.Attach" Multiplicity="*" Role="ToRole_HeaderToAttach"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_HeaderToAttach">
+                        <PropertyRef Name="ANFNR"/>
+                    </Principal>
+                    <Dependent Role="ToRole_HeaderToAttach">
+                        <PropertyRef Name="ID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="HeaderToDetail" sap:content-version="1">
+                <End Type="ZO_ZGPUC2002_SRV.ReQuota_H" Multiplicity="1" Role="FromRole_HeaderToDetail"/>
+                <End Type="ZO_ZGPUC2002_SRV.ReQuota_I" Multiplicity="*" Role="ToRole_HeaderToDetail"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_HeaderToDetail">
+                        <PropertyRef Name="ANFNR"/>
+                    </Principal>
+                    <Dependent Role="ToRole_HeaderToDetail">
+                        <PropertyRef Name="ANFNR"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZO_ZGPUC2002_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ReQuota_HSet" EntityType="ZO_ZGPUC2002_SRV.ReQuota_H" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ReQuota_ISet" EntityType="ZO_ZGPUC2002_SRV.ReQuota_I" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="AttachSet" EntityType="ZO_ZGPUC2002_SRV.Attach" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="AUTHORITYSet" EntityType="ZO_ZGPUC2002_SRV.AUTHORITY" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <AssociationSet Name="HeaderToAttachSet" Association="ZO_ZGPUC2002_SRV.HeaderToAttach" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ReQuota_HSet" Role="FromRole_HeaderToAttach"/>
+                    <End EntitySet="AttachSet" Role="ToRole_HeaderToAttach"/>
+                </AssociationSet>
+                <AssociationSet Name="HeaderToDetailSet" Association="ZO_ZGPUC2002_SRV.HeaderToDetail" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ReQuota_HSet" Role="FromRole_HeaderToDetail"/>
+                    <End EntitySet="ReQuota_ISet" Role="ToRole_HeaderToDetail"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZO_ZGPUC2002_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZO_ZGPUC2002_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

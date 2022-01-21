@@ -1,0 +1,85 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:tb="sap.ui.table" xmlns:f="sap.ui.layout.form" controllerName="demo_fiori.controller.Detail">
+	<semantic:DetailPage id="page" title="Thông tin chi tiết" navButtonPress="onNavBack" showNavButton="{device>/system/phone}">
+		<semantic:content>
+			<Table showSeparators="None" width="auto" backgroundDesign="Transparent">
+				<columns>
+					<Column hAlign="Initial" vAlign="Middle" width="6%" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false"/>
+					<Column hAlign="Initial" vAlign="Middle" width="21%" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false"/>
+					<Column hAlign="Initial" vAlign="Middle" width="10%" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false"/>
+					<Column hAlign="Initial" vAlign="Middle" width="8%" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false"/>
+					<Column hAlign="Initial" vAlign="Middle" width="10%" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false"/>
+					<Column hAlign="Initial" vAlign="Middle" width="8%" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false"/>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Label text="Họ và tên" design="Bold"/>
+							<Text id="NAME" text="{masterItem>/NAME}" textAlign="Left"/>
+							<Label text="Ngày sinh" design="Bold"/>
+							<Text id="QUO_FROM" text="{path: 'masterItem>/BIRTHDAY', type: 'sap.ui.model.type.Date',formatOptions: {style:'medium',pattern:'dd.MM.YYYY', source: {pattern: 'yyyyMMdd'}}}"/>
+							<Label text="Lớp" design="Bold"/>
+							<Text id="CLASS" text="{masterItem>/CLASS}" textAlign="Left"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Label class="masterFont" text="Giới tính" design="Bold"/>
+							<Text id="GENDER" text="{masterItem>/GENDER}" textAlign="Left"/>
+							<Label text="Số điện thoại" design="Bold"/>
+							<Text id="PHONE" text="{masterItem>/PHONE_NUMBER}" textAlign="Left"/>
+							<Label text="Địa chỉ" design="Bold"/>
+							<Text id="ADDRESS" text="{masterItem>/ADDRESS}" textAlign="Left"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			
+			</Table>
+			
+			<tb:Table rows="{path: '/results'}" id="otableItem" noDataText="No Data" selectionMode="MultiSelect" visibleRowCount='10' columnSelect="onColumnSelect">
+				<tb:columns>
+					<tb:Column>
+						<Label text="Môn học"/>
+						<tb:template>
+							<Text text="{SUBJECT}"/>
+						</tb:template>
+					</tb:Column>
+					<tb:Column>
+						<Label text="Học kỳ 1"/>
+						<tb:template>
+							<!--<Text text="{SESMESTER_1}"/>-->
+							
+							<Input value="{SESMESTER_1}"  editable="{settings>/enableEdit}" change="onChangeItem"
+											enabled="{ path: 'Zstt', formatter: '.onformatEnabledInput2'}"/>
+						</tb:template>
+					</tb:Column>
+					<tb:Column>
+						<Label text="Học kỳ 2"/>
+						<tb:template>
+						
+							<Input value="{SESMESTER_2}"  editable="{settings>/enableEdit}" change="onChangeItem"
+											enabled="{ path: 'Zstt', formatter: '.onformatEnabledInput2'}"/>
+						</tb:template>
+					</tb:Column>
+					<tb:Column>
+						<Label text="Cuối năm"/>
+						<tb:template>
+							
+						    <Input value="{SUMMARY}"  editable="{settings>/enableEdit}" change="onChangeItem"
+											enabled="{ path: 'Zstt', formatter: '.onformatEnabledInput2'}"/>
+						</tb:template>
+					</tb:Column>
+					
+					
+				</tb:columns>
+			</tb:Table>
+			
+		</semantic:content>
+		<semantic:customFooterContent>
+			<ToggleButton text="Sửa bảng điểm" id="createButton" enabled="{appView>/addEnabled}" pressed="{settings>/enableEdit}" icon="sap-icon://edit" visible="{appView>/manage}"/>
+				<Button id="saveButton" press="onSave" text="Lưu bảng điểm" icon="sap-icon://save" enabled="{appView>/saveEnabled}" tooltip="Save change"
+				visible="{settings>/enableEdit}"/>
+		</semantic:customFooterContent>
+	</semantic:DetailPage>
+</mvc:View>

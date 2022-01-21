@@ -1,0 +1,58 @@
+<mvc:View controllerName="demo_fiori.controller.Master" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	displayBlock="true" xmlns="sap.m">
+
+			<!--<Page title="Danh sách học sinh">-->
+			<!--	<content>-->
+			<!--	   <List id="list" items="{ path: 'masterList>/' }"  noDataText="No Data" mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}" growing="true" growingScrollToLoad="true" updateFinished="onUpdateFinished" selectionChange="onSelectionChange">-->
+						
+			<!--			<items>-->
+			<!--				<ObjectListItem type="{= ${device>/system/phone} ? 'Active' : 'Inactive'}" activeIcon="sap-icon://accelerated" press="onSelectionChange" title="{masterList>NAME}">-->
+			<!--					<firstStatus>-->
+			<!--						<ObjectStatus class="rfqStatus" text="{masterList>CLASS}">-->
+			<!--						</ObjectStatus>-->
+			<!--					</firstStatus>-->
+			<!--					<attributes>-->
+			<!--						<ObjectAttribute text="{path: 'masterList>BIRTHDAY',type: 'sap.ui.model.type.Date',formatOptions: {style:'medium',pattern:'dd.MM.yyyy', source: {pattern: 'yyyyMMdd'}}}"/> -->
+								
+			<!--					</attributes>-->
+			<!--				</ObjectListItem>-->
+			<!--			</items>-->
+			<!--		</List>-->
+			<!--	</content>-->
+			<!--</Page>-->
+			
+			
+			
+		<semantic:MasterPage  id="page" title="Danh sách học sinh">
+		<semantic:subHeader>
+			<Bar id="headerBar">
+				<contentMiddle>
+					<!--<SearchField id="searchField" showRefreshButton="{= !${device>/support/touch} }" tooltip="{i18n>masterSearchTooltip}" width="100%" search="onSearch"/>-->
+					<SearchField id="searchRFQ" placeholder="Search" liveChange="onSearch"/>
+				</contentMiddle>
+			</Bar>
+		</semantic:subHeader>
+		<semantic:content>
+			<PullToRefresh id="pullToRefresh" visible="{device>/support/touch}" refresh="onRefresh"/>
+			  <List id="list" items="{ path: 'masterList>/' }"  noDataText="No Data" mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}" growing="true" growingScrollToLoad="true" updateFinished="onUpdateFinished" selectionChange="onSelectionChange">
+						
+						<items>
+							<ObjectListItem type="{= ${device>/system/phone} ? 'Active' : 'Inactive'}" activeIcon="sap-icon://accelerated" press="onSelectionChange" title="{masterList>NAME}">
+								<firstStatus>
+									<ObjectStatus class="rfqStatus" text="{masterList>CLASS}">
+									</ObjectStatus>
+								</firstStatus>
+								<attributes>
+									<ObjectAttribute text="{path: 'masterList>BIRTHDAY',type: 'sap.ui.model.type.Date',formatOptions: {style:'medium',pattern:'dd.MM.yyyy', source: {pattern: 'yyyyMMdd'}}}"/> 
+								
+								</attributes>
+							</ObjectListItem>
+						</items>
+					</List>
+		</semantic:content>
+		<semantic:customFooterContent>
+			<Button text="Thêm học sinh" id="createButton" enabled="{appView>/addEnabled}" press="onCreate" icon="sap-icon://add" visible="{appView>/manage}"/>
+		</semantic:customFooterContent>		
+	</semantic:MasterPage>
+	
+</mvc:View>

@@ -1,0 +1,26 @@
+<mvc:View controllerName="demo_fiori.controller.demo" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+				   <List id="list" items="{ path: 'masterList>/' }"  noDataText="No Data" mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}" growing="true" growingScrollToLoad="true" updateFinished="onUpdateFinished" selectionChange="onSelectionChange">
+						
+						<items>
+							<ObjectListItem type="{= ${device>/system/phone} ? 'Active' : 'Inactive'}" activeIcon="sap-icon://accelerated" press="onSelectionChange" title="{masterList>MATNR}">
+								<firstStatus>
+									<ObjectStatus class="rfqStatus" text="{masterList>ERSDA}">
+									</ObjectStatus>
+								</firstStatus>
+								<attributes>
+									<ObjectAttribute text="{path: 'masterList>CREATED_AT_TIME',type: 'sap.ui.model.type.Time',formatOptions: {style:'medium',pattern:'hh:mm:ss', source: {pattern: 'hhmmss'}}}"/> 
+								
+								</attributes>
+							</ObjectListItem>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
